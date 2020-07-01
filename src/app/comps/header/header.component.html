@@ -1,0 +1,40 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+<div >
+    <mat-toolbar color="primary">
+        <mat-toolbar-row fxLayoutAlign="space-between center center ">
+            <div fxLayout="row" fxLayoutGap="150px">
+                <button mat-button>
+                    <mat-icon >home</mat-icon>
+                    <span mat-button routerLink="/pict"> Home </span>
+                </button>
+    
+                <button mat-button routerLink="/contact">Contact us </button>
+                <button mat-button routerLink="/about">About us </button>
+            </div>
+    
+            <div class="as">
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                  <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                      <mat-icon>dialpad</mat-icon>
+                      <span>Redial</span>
+                    </button>
+                    <button mat-menu-item disabled>
+                      <mat-icon>voicemail</mat-icon>
+                      <span>Check voice mail</span>
+                    </button>
+                    <button mat-menu-item>
+                      <mat-icon>notifications_off</mat-icon>
+                      <span>Disable alerts</span>
+                    </button>
+                  </mat-menu>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    
+
+</div>
+
+<router-outlet></router-outlet>
